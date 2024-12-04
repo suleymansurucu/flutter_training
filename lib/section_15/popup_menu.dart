@@ -2,17 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 main() {
-  runApp(MyDropDown());
+  runApp(MyPopupMenu());
 }
 
-class MyDropDown extends StatefulWidget {
-  const MyDropDown({super.key});
-
+class MyPopupMenu extends StatefulWidget {
+  const MyPopupMenu({super.key});
   @override
-  State<MyDropDown> createState() => _MyDropDownState();
+  State<MyPopupMenu> createState() => _MyPopupMenuState();
 }
+class _MyPopupMenuState extends State<MyPopupMenu> {
 
-class _MyDropDownState extends State<MyDropDown> {
   var _myStateList = [
     'New York',
     'New Jersey',
@@ -23,44 +22,46 @@ class _MyDropDownState extends State<MyDropDown> {
     'Florida'
   ];
   var _selectedState;
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-          backgroundColor: Colors.blue.shade300,
-          appBar: AppBar(
-            title: Text("Dropdown Example Title"),
-          ),
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                DropdownButton(
-                    hint: Text("Choose Your Living State"),
-                    icon: Icon(Icons.add),
-                    iconSize: 32,
-                    underline: Container(
-                      height: 2,
-                      color: Colors.blue,
-                    ),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Popup Menu"),
+        ),
+        body: Center(
+          child: Column(
+            children: [
+              PopupMenuButton(
+                onSelected: (String value){
+                  debugPrint(value);
+                  setState(() {
+                    _selectedState=value;
+                    print(_selectedState);
+                  });
+                },
+                onOpened: (){
+                  print("Opened");
 
-
-                    items: _myStateList
-                        .map((String element) => DropdownMenuItem(
-                      child: Text(element),
-                      value: element,
-                    ))
-                        .toList(),
-                    value: _selectedState,
-                    onChanged: (dynamic value) {
-                      setState(() {
-                        _selectedState=value;
-                      });
-                    })
-              ],
-            ),
+                },
+                  itemBuilder: (BuildContext context){
+                     /*<PopupMenuEntry<String>>[
+                      PopupMenuItem(child: Text('New Jersey'), value: 'New Jersey',),
+                      PopupMenuItem(child: Text('New York'), value: 'New York',),
+                      PopupMenuItem(child: Text('Florida'), value: 'Florida',),
+                    ];*/
+                    return _myStateList.map(
+                            (String value)=>PopupMenuItem(
+                              child: Text(value),
+                              value: value,)
+                    ).toList();
+                  },
+              ),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
+
