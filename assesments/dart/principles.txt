@@ -1,0 +1,9 @@
+
+
+SOLID
+- Single Responsibility
+- Open Closed
+- Liskov
+- Interface
+- Dependency Injection
+Design Patterns

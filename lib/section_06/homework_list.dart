@@ -7,16 +7,18 @@ and prints it on the screen.
 
  */
 
+import 'package:flutter/material.dart';
+
 main() {
   // #answer - 1
   List<String> cityName = ["Garfield", "Clifton", "Paterson", "Lodi"];
   print(cityName);
 
   // #answer - 2
-  var computerPropitiries = <String,dynamic> {
+  var computerProperties = <String,dynamic> {
     "core" : "M4 Pro New",
     "ram" : 32,
     "SSD " : true
   };
-  print(computerPropitiries);
+  print(computerProperties);
 }
