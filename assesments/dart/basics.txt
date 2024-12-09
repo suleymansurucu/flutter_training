@@ -15,3 +15,28 @@
 - static final v5 = "Hello";
 - final String v6 = "Hello";
 - const String v7 = "Hello";
+
+- Summary:
+> Variables :
+  - String: is used to store text data.
+  - int: is used to store integer(whole number) values.
+  - double: is used to store decimal (floating-point) numbers
+  - bool: is used to store boolean values: true or false
+  - DateTime: is used to store date and time values.
+
+  - Dynamic Types: If the of the variable is not known beforehand, you can use dynamic. However, it is not recommended for strong type safety.
+
+  - Key Points About Variables:
+   - var: The type is inferred automatically based on the assigned value.
+   -final and const : use these for immutable variables.
+    -final: value is determined at runtime.
+    -const: Value is determined at compile-time
+
+> Mutable and Immutable
+  - Mutable: Variables whose values can be modified.
+    Examples: var, dynamic, or mutable collections like lists.
+  - Immatable: Variables whose values cannot be modified after declaration.
+    Examples: Variables declared with final and const.
+
+
+

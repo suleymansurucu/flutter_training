@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class MyListView extends StatelessWidget {
    MyListView({super.key});
 
-  List<Student> allStudents=List.generate(500, (index) => Student(index+1, "Ogrenci Adi ${index+1}", "Ogrenci Soyadi ${index+1}") );
+  List<StudentList> allStudents=List.generate(500, (index) => StudentList(index+1, "Ogrenci Adi ${index+1}", "Ogrenci Soyadi ${index+1}") );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +14,7 @@ class MyListView extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: ListView(
-        children: allStudents.map((Student std) => ListTile(
+        children: allStudents.map((StudentList std) => ListTile(
           title: Text(std.name),
           subtitle: Text(std.surname),
           leading: CircleAvatar(child: Text(std.id.toString()),),
@@ -24,10 +24,10 @@ class MyListView extends StatelessWidget {
   }
 }
 
-class Student {
+class StudentList {
   final int id;
   final String name;
   final String surname;
-  Student(this.id,this.name,this.surname);
+  StudentList(this.id,this.name,this.surname);
 
 }

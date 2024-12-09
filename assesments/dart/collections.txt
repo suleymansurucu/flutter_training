@@ -2,3 +2,20 @@ Collections
 - Array
 - List
 - Map, Set, Stack, Queue
+
+> Dart provides powerful collection types such as List, Map, Set, Stack, Queue.
+
+ - List:
+    A List in Dart is an ordered collection of elements. It behaves similarly to arrays in other languages.
+     * Fixed-Length list: A list with a predefined size.
+     * A list that can dynamically grow or shrink
+ - Map:
+    A map is collection of key-value pairs. Key must be unique. Fast Access to data via keys.
+
+- Set: A set is an unordered collection of unique elements. Removing duplicates or maintaining unique values.
+
+- Stack:
+    Dart does not have a built-in Stack class, but you can use a List to implement stack functionality. Follows the LIFO (Last In, First Out) principle.
+
+- Queue:
+    Dart provides the Queue class under the dart:collection library. It follows the FIFO (First In, First Out) priciple. Processing element in a sequential manner.
