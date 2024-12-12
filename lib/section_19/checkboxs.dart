@@ -36,6 +36,17 @@ class _FormBodyState extends State<FormBody> {
 
   double sliverValue = 2;
   String selectedColor = 'red';
+  List<String> cityOfTurkey= ['Ankara','Istanbul','Hatay'];
+  String selectedCity='Ankara';
+   DateTime rightNowDate=DateTime(2024,11,11);
+       DateTime selectedDate = DateTime(2024,11,11);
+  DateTime firstDate = DateTime(2019,1,1);
+  DateTime lastDate = DateTime(2026,12,31);
+  TimeOfDay rightNowTime = TimeOfDay.now();
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +167,27 @@ class _FormBodyState extends State<FormBody> {
             },
             hint: Text('Can you choose please'),
             value: selectedColor,
-          )
+          ),
+
+          DropdownButton<String>(items: cityOfTurkey.map((value){
+            return DropdownMenuItem(child: Text(value), value: value,);
+          }).toList(),onChanged: (newValue){
+            setState(() {
+              selectedCity=newValue!;
+              print(selectedCity);
+            });
+          },value: selectedCity,),
+
+          ElevatedButton(onPressed: () async {
+            showDatePicker(context: context, initialDate: rightNowDate , firstDate: firstDate, lastDate: lastDate).then((selectedDate) {
+              print(selectedDate.toString());
+            });
+          }, child: const Text("Choose the Date",),),
+          ElevatedButton(onPressed: (){
+            showTimePicker(context: context, initialTime: rightNowTime).then((selectedTime){
+              print(selectedTime.toString());
+            });
+          }, child: const Text("Choose the Time",),),
         ],
       ),
     );
