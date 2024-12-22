@@ -111,27 +111,27 @@ class _HomePageModaState extends State<HomePageModa>
               padding: EdgeInsets.all(10),
               scrollDirection: Axis.horizontal,
               children: [
-                listElements('images/model1.jpeg', 'images/chanellogo.jpg'),
+                listElements('assets/images/model1.jpeg', 'assets/images/chanellogo.jpg'),
                 const SizedBox(
                   width: 30,
                 ),
-                listElements('images/model2.jpeg', 'images/chloelogo.png'),
+                listElements('assets/images/model2.jpeg', 'assets/images/chloelogo.png'),
                 const SizedBox(
                   width: 30,
                 ),
-                listElements('images/model3.jpeg', 'images/louisvuitton.jpg'),
+                listElements('assets/images/model3.jpeg', 'assets/images/louisvuitton.jpg'),
                 const SizedBox(
                   width: 30,
                 ),
-                listElements('images/model1.jpeg', 'images/chanellogo.jpg'),
+                listElements('assets/images/model1.jpeg', 'assets/images/chanellogo.jpg'),
                 const SizedBox(
                   width: 30,
                 ),
-                listElements('images/model2.jpeg', 'images/chloelogo.png'),
+                listElements('assets/images/model2.jpeg', 'assets/images/chloelogo.png'),
                 const SizedBox(
                   width: 30,
                 ),
-                listElements('images/model3.jpeg', 'images/louisvuitton.jpg'),
+                listElements('assets/images/model3.jpeg', 'assets/images/louisvuitton.jpg'),
                 const SizedBox(
                   width: 30,
                 ),
@@ -218,7 +218,7 @@ class _HomePageModaState extends State<HomePageModa>
                       children: [
                         InkWell(
                           onTap: (){
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DetailPage(imgPath: 'images/modelgrid1.jpeg')));
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DetailPage(imgPath: 'assets/images/modelgrid1.jpeg')));
                           },
                           child: Hero(
                             tag: 'images/modelgrid1.jpeg',
@@ -228,7 +228,7 @@ class _HomePageModaState extends State<HomePageModa>
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
                                 image: const DecorationImage(
-                                    image: AssetImage('images/modelgrid1.jpeg'),
+                                    image: AssetImage('assets/images/modelgrid1.jpeg'),
                                     fit: BoxFit.cover),
                               ),
                             ),
@@ -242,10 +242,10 @@ class _HomePageModaState extends State<HomePageModa>
                           children: [
                             InkWell(
                               onTap: (){
-                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DetailPage(imgPath: 'images/modelgrid2.jpeg')));
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DetailPage(imgPath: 'assets/images/modelgrid2.jpeg')));
                               },
                               child: Hero(
-                                tag: 'images/modelgrid2.jpeg',
+                                tag: 'assets/images/modelgrid2.jpeg',
                                 child: Container(
                                   width:
                                       (MediaQuery.of(context).size.width - 100) / 2,
@@ -253,7 +253,7 @@ class _HomePageModaState extends State<HomePageModa>
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(5),
                                     image: const DecorationImage(
-                                        image: AssetImage('images/modelgrid2.jpeg'),
+                                        image: AssetImage('assets/images/modelgrid2.jpeg'),
                                         fit: BoxFit.cover),
                                   ),
                                 ),
@@ -262,10 +262,10 @@ class _HomePageModaState extends State<HomePageModa>
                             SizedBox(height: 10),
                             InkWell(
                               onTap:  (){
-                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DetailPage(imgPath: 'images/modelgrid3.jpeg')));
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DetailPage(imgPath: 'assets/images/modelgrid3.jpeg')));
                               },
                               child: Hero(
-                                tag: 'images/modelgrid3.jpeg',
+                                tag: 'assets/images/modelgrid3.jpeg',
                                 child: Container(
                                   width:
                                       (MediaQuery.of(context).size.width - 100) / 2,
@@ -273,7 +273,7 @@ class _HomePageModaState extends State<HomePageModa>
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(5),
                                     image: const DecorationImage(
-                                        image: AssetImage('images/modelgrid3.jpeg'),
+                                        image: AssetImage('assets/images/modelgrid3.jpeg'),
                                         fit: BoxFit.cover),
                                   ),
                                 ),

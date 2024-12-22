@@ -22,9 +22,17 @@ class Constants_Pokedex {
 
   static _calculatorFontSize(int size){
     if (ScreenUtil().orientation ==Orientation.portrait) {
-      return size.sp;
+      return size.h;
     }  else {
-      return (size*1.0).sp;
+      return (size*2.0).h;
     }
+  }
+
+  static getPokeInfoTextStyle(){
+    return TextStyle(fontSize: _calculatorFontSize(16), color: Colors.black);
+  }
+
+  static getPokeLabelTextStyle(){
+    return TextStyle(fontSize: _calculatorFontSize(20),fontWeight: FontWeight.bold, color: Colors.black);
   }
 }
