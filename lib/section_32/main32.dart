@@ -36,6 +36,7 @@ class _newHomePageState extends State<newHomePage> with SingleTickerProviderStat
  // late Animation animation;
   // late Animation animationColor;
   late Animation animation2;
+  late Animation animation3;
 
   @override
   void initState() {
@@ -64,6 +65,7 @@ class _newHomePageState extends State<newHomePage> with SingleTickerProviderStat
   //  animation =  Tween(begin: 20, end: 50).animate(controller);
     //animationColor = ColorTween(begin: Colors.blue, end: Colors.yellow).animate(controller);
     animation2= AlignmentTween(begin: const Alignment(-1, -1), end: const Alignment(1,1)).animate(controller);
+    animation3= CurvedAnimation(parent: controller, curve: Curves.bounceIn);
   }
   @override
   void dispose() {
@@ -80,12 +82,14 @@ class _newHomePageState extends State<newHomePage> with SingleTickerProviderStat
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+
             Container(
               alignment: animation2.value,
-                child: Text('0', style: TextStyle(fontSize: controller.value+20),)),
+                child: Text('0', style: TextStyle(fontSize: controller.value*36),),),
             const Hero(tag: 'picture', child: FlutterLogo(
               size: 64,
             )),
+          Text('Suleyman Surucu', style: TextStyle(fontSize: animation3.value*40),),
             ElevatedButton(onPressed: (){
               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const NewPage()));
             }, child: const Text('Next Page'))
