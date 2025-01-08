@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_training/section_17/main_navigations.dart';
+import 'package:flutter_training/section_32/animation_widget.dart';
 import 'package:flutter_training/section_32/new_page.dart';
+import 'package:flutter_training/section_32/transform_widget.dart';
 
 void main() {
   runApp(MyHomePage32());
@@ -92,7 +94,13 @@ class _newHomePageState extends State<newHomePage> with SingleTickerProviderStat
           Text('Suleyman Surucu', style: TextStyle(fontSize: animation3.value*40),),
             ElevatedButton(onPressed: (){
               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const NewPage()));
-            }, child: const Text('Next Page'))
+            }, child: const Text('Next Page')),
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const AnimationWidget()));
+            }, child: const Text('Next Animation Widget Page')),
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const TransformWidget()));
+            }, child: const Text('Next Transform Widget Page')),
           ],
         ),
       ),
