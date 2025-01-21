@@ -24,13 +24,13 @@
   - bool: is used to store boolean values: true or false
   - DateTime: is used to store date and time values.
 
-  - Dynamic Types: If the of the variable is not known beforehand, you can use dynamic. However, it is not recommended for strong type safety.
+  - Dynamic Types: If the type of the variable is not known beforehand, you can use dynamic. However, it is not recommended for ensuring strong type safety.
 
   - Key Points About Variables:
    - var: The type is inferred automatically based on the assigned value.
    -final and const : use these for immutable variables.
-    -final: value is determined at runtime.
-    -const: Value is determined at compile-time
+   - final: value is determined at runtime.
+   - const: Value is determined at compile-time
 
 > Mutable and Immutable
   - Mutable: Variables whose values can be modified.
